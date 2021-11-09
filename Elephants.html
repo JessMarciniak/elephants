@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elephant Fun Facts</title>
+    <style>
+      body {
+        font-family: fangsong;
+        text-align: center;
+      }
+      h1 {
+        color: rgb(68 74 87);
+        font-size: 55px;
+        font-weight: 900;
+      }
+      h2 {
+        color: rgb(96 102 119);
+        font-size: 40px;
+        margin: 10px 200px;
+        border: 2px rgb(96 102 119) solid;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 4px;
+      }
+      ul {
+        list-style: inside;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        color: #2f333a;
+        font-size: large;
+      }
+      li {
+        padding: 5px 0;
+      }
+      hr {
+        color: rgb(96 102 119);
+        margin: 70px 0;
+        border-style: solid;
+      }
+
+      button {
+        display: block;
+        border-radius: 30px;
+        margin: 40px auto;
+        color: #9dcdf1;
+        background: #737076;
+        font-size: larger;
+        padding: 20px 15px;
+        transition: all 200ms ease-in-out;
+        box-shadow: 7px 7px 10px rgb(220 218 218 / 55%);
+        border: 2px #737076 solid;
+      }
+      button:hover {
+        background: #9dcdf1;
+        color: #737076;
+        cursor: pointer;
+        border: 2px #9dcdf1 solid;
+      }
+      a {
+        padding: 10px 10px;
+        font-size: large;
+        color: #2f333a;
+      }
+      p {
+        color: #2f333a;
+        font-size: larger;
+        line-height: 1.5;
+        margin: 40px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 5px rgb(68 74 87) solid;
+        background: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
+        border-radius: 10px;
+      }
+      .learnMore:hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fun Facts About Elephants</h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/018/123/original/Elephants-3-species.jpg?1633199640"
+        alt="Three pictures (Left to Right) African Savannah Elephant, Asian
+    Elephant, and African Forest Elephant"
+      />
+      <span
+        ><p>
+          Pictured from left to right are the three current types of elephants:
+          African Savannah Elephant, Asian Elephant, and African Forest
+          Elephant.
+        </p></span
+      >
+      <h2>Did you know?</h2>
+      <ul>
+        <li>
+          Elephants can suck up to 14 litres of water a time into their trunks
+          and then blow this water into their mouths to drink.
+        </li>
+        <li>
+          Elephants use mud to protect themselves from sunburn, insect bites and
+          moisture loss.
+        </li>
+        <li>
+          Elephants can walk almost silently, due to the soft padding on their
+          feet.
+        </li>
+        <li>
+          Elephants use their feet to listen to the sub-sonic rumblings made by
+          other elephants through vibrations in the ground.
+        </li>
+        <li>
+          Female elephants remain pregnant for 2 years – the longest gestation
+          period of all mammals.
+        </li>
+        <li>
+          Elephants are highly sensitive and caring animals, and have been
+          observed to express grief, compassion, altruism and play.
+        </li>
+        <li>
+          Elephants will pay respect to the bones of their dead by gently
+          touching the skulls and tusks with their trunks and feet.
+        </li>
+        <li>
+          Elephants are terrified of bees and ants, so some African farmers
+          protect their fields from elephant damage by lining the borders with
+          beehives.
+        </li>
+      </ul>
+      <a
+        href="https://en.wikipedia.org/wiki/Elephant"
+        target="_blank"
+        class="learnMore"
+      >
+        Want to learn more? </a
+      >👈
+      <hr />
+      <button>Join our Mailing List</button>
+
+      <strong>Coded by</strong><em> Jessica Marciniak</em>
+      <br />
+    </div>
+    <script>
+      function contact() {
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your e-mail address?");
+        alert(
+          "Hello " +
+            name +
+            ", be sure to watch your inbox for more elephant facts!"
+        );
+        let help = prompt(
+          "Would you also like to learn ways to help save elephants around the world?"
+        );
+        help = help.toLowerCase();
+        help = help.trim();
+        if (
+          help === "yes" ||
+          help === "ok" ||
+          help === "sure" ||
+          help === "yep"
+        ) {
+          alert(
+            "Thank you for wanting to help! We will reach out via e-mail with organization contacts 🙂"
+          );
+        } else {
+          alert(
+            "We're happy to have you join our mailling list for more elephant facts!🐘"
+          );
+        }
+      }
+
+      let mailingList = document.querySelector("button");
+      mailingList.addEventListener("click", contact);
+    </script>
+  </body>
+</html>
